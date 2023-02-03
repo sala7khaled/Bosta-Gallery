@@ -1,4 +1,4 @@
-# Bosta Gallert
+# Bosta Gallery
 Bosta Gallert is a gallery app that sync your albums online for every user's data.
 
 ## Author
