@@ -13,7 +13,6 @@ class AlbumController: BaseController {
     @IBOutlet weak var collectionView: IntrinsicCollectionView!
     
     var presenter: AlbumPresenterInterface!
-    var searchText: String = ""
     
     override func viewWillAppear(_ animated: Bool) {
         self.title = presenter.album.title

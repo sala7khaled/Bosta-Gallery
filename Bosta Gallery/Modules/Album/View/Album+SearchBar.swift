@@ -22,27 +22,26 @@ extension AlbumController: UISearchBarDelegate, UISearchControllerDelegate {
         }
     }
     
-    func searchBarCancelButtonClicked(_searchBar: UISearchBar) {
-        self.searchText = ""
-        reloadUI()
-    }
-
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
-        DispatchQueue.main.async {
-            if searchText == "" {
-                self.presenter.images = self.presenter.backupImages
-            } else {
-                self.presenter.images = []
-                for image in self.presenter.backupImages {
-                    if image.title.lowercased().contains(searchText.lowercased()) {
-                        self.presenter.images.append(image)
-                    }
+        
+        if searchText == "" {
+            presenter.images = presenter.backupImages
+        } else {
+            presenter.images = []
+            for image in presenter.backupImages {
+                if image.title.lowercased().contains(searchText.lowercased()) {
+                    presenter.images.append(image)
                 }
             }
-
-            self.collectionView.reloadData()
         }
-
+        reloadUI()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if searchBar.text == "" {
+            searchBar.resignFirstResponder()
+            presenter.images = presenter.backupImages
+            reloadUI()
+        }
     }
 }
