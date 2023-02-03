@@ -22,4 +22,4 @@ I've used [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) to retrive
 <img src="/Assets/2.png" alt="Demo" height="600px"/> &nbsp; &nbsp; <img src="/Assets/3.png" alt="Demo" height="600px"/>
 
 ### Gallery
-<img src="/Assets/4.png" alt="Demo" height="600px"/> &nbsp; &nbsp; <img src="/Assets/5.png" alt="Demo" height="600px"/>
+<img src="/Assets/4.png" alt="Demo" height="600px"/> &nbsp; &nbsp; <img src="/Assets/7.png" alt="Demo" height="600px"/>
