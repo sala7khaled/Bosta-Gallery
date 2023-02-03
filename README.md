@@ -15,9 +15,11 @@ I've used [IMDb-API | Swagger](https://imdb-api.com/swagger/index.html) to retri
 
 ## Preview
 
-### Home
+### Lauch
 <img src="/Assets/1.png" alt="Demo" height="600px"/>
 
+### Home
+<img src="/Assets/2.png" alt="Demo" height="600px"/> &nbsp; &nbsp; <img src="/Assets/3.png" alt="Demo" height="600px"/>
+
 ### Gallery
-<img src="/Assets/2.png" alt="Demo" height="600px"/>
-<img src="/Assets/3.png" alt="Demo" height="600px"/>
+<img src="/Assets/4.png" alt="Demo" height="600px"/> &nbsp; &nbsp; <img src="/Assets/5.png" alt="Demo" height="600px"/>
