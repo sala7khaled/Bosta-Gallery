@@ -22,12 +22,17 @@ class AlbumController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
-        initCollectionView()
+//        initCollectionView()
     }
     
 }
 
 extension AlbumController: AlbumView {
+    
+    func initCollectionView2() {
+        initCollectionView()
+
+    }
     
     func showViewLoading() {
         showLoading()
@@ -35,9 +40,11 @@ extension AlbumController: AlbumView {
     
     func hideViewLoading() {
         hideLoading()
+        initCollectionView()
     }
     
     func reloadUI() {
+        initCollectionView()
         collectionView.reloadData()
     }
 }
