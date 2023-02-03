@@ -1,5 +1,5 @@
 # Bosta Gallery
-Bosta Gallert is a gallery app that sync your albums online for every user's data.
+Bosta Gallery is a gallery app that sync your albums online for every user's data.
 
 ## Author
 Created by **Salah Khaled** on 2023. Copyright © 2023: [Linkedin](Https://www.linkedin.com/in/sala7khaled/)
