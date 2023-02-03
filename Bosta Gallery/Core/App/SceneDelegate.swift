@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         let nav = NavController(rootViewController: HomeRouter.assembleModule())
         RootRouter.presentRootScreen(in: window, vc: nav)
-
+        
         checkReachability()
     }
 

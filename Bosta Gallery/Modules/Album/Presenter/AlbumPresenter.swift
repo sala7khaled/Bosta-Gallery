@@ -34,7 +34,6 @@ extension AlbumPresenter: AlbumInteractorOutput {
         self.images = response
         view?.hideViewLoading()
         view?.reloadUI()
-        
     }
     
     func didFailedGetImages(error: APIError) {
