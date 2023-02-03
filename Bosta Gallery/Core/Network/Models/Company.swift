@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+class Company: Codable {
+
+    let name: String
+    let catchPhrase: String
+    let bs: String
+
+}
+
+extension Company {
+
+    enum CodingKeys: String, CodingKey {
+
+        case name
+        case catchPhrase
+        case bs
+    }
+}
