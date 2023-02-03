@@ -1,42 +1,10 @@
 //
-//  AlbumController+CollectionView.swift
+//  Album+CollectionView.swift
 //  Bosta Gallery
 //
 //  Created by Salah Khaled on 03/02/2023.
 //  Copyright © 2023 Salah Khaled. All rights reserved.
 //
-
-//import UIKit
-//
-//extension AlbumController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-//
-//    func initCollectionView() {
-//        collectionView.initialize(cellClass: PhotoCell.self, delegate: self, dataSource: self)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-////        return presenter.images.count
-//        return 10
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeue(cellClass: PhotoCell.self, indexPath: indexPath)
-////        cell.configure(with: presenter.images[indexPath.row])
-//
-//        cell.configure(with: "https://via.placeholder.com/600/b4412f")
-//        return cell
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let size = CGSize( width: collectionView.frame.width / 3,
-//                          height: collectionView.frame.height / 6)
-//
-//        return size
-//    }
-//
-//}
-
 
 import UIKit
 
@@ -47,13 +15,12 @@ extension AlbumController: UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return presenter.images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(cellClass: PhotoCell.self, indexPath: indexPath)
-        cell.configure(with: "https://via.placeholder.com/600/b4412f")
-//        presenter.images[indexPath.row]
+        cell.configure(with: presenter.images[indexPath.row])
         return cell
     }
     
@@ -67,8 +34,10 @@ extension AlbumController: UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var size = collectionView.frame.size
-        size.width = size.width / 3 - 2
+        size.width = size.width / 3
         size.height = size.width
+        
         return size
     }
+    
 }

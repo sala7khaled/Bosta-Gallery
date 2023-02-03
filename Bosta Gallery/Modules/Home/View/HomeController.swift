@@ -26,6 +26,9 @@ class HomeController: BaseController {
         presenter.viewDidLoad()
         initTableView()
     }
+    @IBAction func changeUserBtnClicked(_ sender: Any) {
+        presenter.changeUser()
+    }
     
 }
 

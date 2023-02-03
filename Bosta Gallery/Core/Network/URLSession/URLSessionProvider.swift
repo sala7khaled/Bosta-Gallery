@@ -16,7 +16,7 @@ class URLSessionProvider: URLSessionProviderProtocol {
     static var shared = URLSessionProvider()
     
     var session: URLSessionProtocol
-    let REQUEST_TIME = 80.00
+    let REQUEST_TIME = 30.00
     var online = false
     let imageCache = NSCache<NSString, UIImage>()
     

@@ -16,26 +16,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-place-holder" translatesAutoresizingMaskIntoConstraints="NO" id="Ixv-7s-vny">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GvG-qQ-54I">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Ixv-7s-vny" secondAttribute="trailing" id="MII-8z-2J8"/>
-                <constraint firstItem="Ixv-7s-vny" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PVk-1k-tYN"/>
-                <constraint firstItem="Ixv-7s-vny" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hZi-m3-hva"/>
-                <constraint firstAttribute="bottom" secondItem="Ixv-7s-vny" secondAttribute="bottom" id="lS7-R0-hhE"/>
+                <constraint firstAttribute="trailing" secondItem="GvG-qQ-54I" secondAttribute="trailing" id="0MP-sA-i26"/>
+                <constraint firstAttribute="bottom" secondItem="GvG-qQ-54I" secondAttribute="bottom" id="753-Cg-DD7"/>
+                <constraint firstItem="GvG-qQ-54I" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Y9d-ui-dvc"/>
+                <constraint firstItem="GvG-qQ-54I" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hod-nm-v9w"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="100" height="100"/>
             <connections>
-                <outlet property="photo" destination="Ixv-7s-vny" id="eVb-9H-rZi"/>
+                <outlet property="photo" destination="GvG-qQ-54I" id="5SF-ER-77B"/>
             </connections>
-            <point key="canvasLocation" x="173.91304347826087" y="129.24107142857142"/>
+            <point key="canvasLocation" x="173.91304347826087" y="132.58928571428572"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="ic-place-holder" width="320" height="166"/>
-    </resources>
 </document>

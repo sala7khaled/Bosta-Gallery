@@ -21,8 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
+        window?.makeKeyAndVisible()
+        
         let nav = NavController(rootViewController: HomeRouter.assembleModule())
-        RootRouter.presentRootScreen(in: window, vc: nav)
+        window?.rootViewController = nav
         
         checkReachability()
     }

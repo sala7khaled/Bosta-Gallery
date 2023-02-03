@@ -29,6 +29,7 @@ protocol HomePresenterInterface: AnyObject {
     func viewDidLoad()
     func showError(with message: String?)
     
+    func changeUser()
     func presentAlbum(with album: Album)
 }
     

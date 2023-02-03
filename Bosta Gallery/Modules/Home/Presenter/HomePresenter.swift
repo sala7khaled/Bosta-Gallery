@@ -28,6 +28,12 @@ class HomePresenter: HomePresenterInterface {
         router.presentError(with: message)
     }
     
+    func changeUser() {
+        randomUser = users.randomElement()
+        view?.showViewLoading()
+        interactor.getAlbums(userId: randomUser.id)
+    }
+    
     func presentAlbum(with album: Album) {
         router.presentAlbum(with: album)
     }
@@ -37,8 +43,7 @@ class HomePresenter: HomePresenterInterface {
 extension HomePresenter: HomeInteractorOutput {
     func didGetUsers(response: [User]) {
         self.users = response
-        self.randomUser = response.randomElement()
-        
+        self.randomUser = users.randomElement()
         interactor.getAlbums(userId: randomUser.id)
     }
     

@@ -2,7 +2,7 @@
 //  AlbumInteractor.swift
 //  Bosta Gallery
 //
-//  Created by Salah Khaled on 02/02/2023.
+//  Created by Salah Khaled on 03/02/2023.
 //  Copyright © 2023 Salah Khaled. All rights reserved.
 //
 
@@ -26,14 +26,14 @@ class AlbumInteractor: AlbumInteractorInterface {
                         self.output?.didFailedGetImages(error: error)
                     }
                 }
+                
             }
             
-            // Retrive from Cashing
-        }
+        } // retrive data from cashing if device is offline
         else if GalleryRepo.shared.images != nil {
             output?.didGetImages(response: GalleryRepo.shared.images!)
         } else {
-            output?.didFailedGetImages(error: APIError(type: .network, message: "No internet connection!".l()))
+            output?.didFailedGetImages(error: APIError(type: .network, message: "no_internet_connection".l()))
         }
     }
     

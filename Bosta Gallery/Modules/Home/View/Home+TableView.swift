@@ -21,6 +21,7 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(cellClass: TitleCell.self)
         cell.configure(with: presenter.albums[indexPath.row].title)
+        cell.selectionStyle = .none
         return cell
     }
 

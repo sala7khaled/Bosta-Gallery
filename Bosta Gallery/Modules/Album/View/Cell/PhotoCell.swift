@@ -16,7 +16,8 @@ class PhotoCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func configure(with image: String) {
-        photo.loadImage(url: image)
+    func configure(with image: Image) {
+        photo.loadImage(url: "\(image.url).jpg")
     }
+
 }

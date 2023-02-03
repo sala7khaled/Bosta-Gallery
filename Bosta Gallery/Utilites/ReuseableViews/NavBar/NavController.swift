@@ -17,7 +17,7 @@ class NavController: UINavigationController {
     
     private func configure() {
         
-        navigationBar.tintColor = .appWhite
+        navigationBar.tintColor = .appBlack
         navigationBar.barTintColor = .appWhite
         
         let font = UIFont.boldSystemFont(ofSize: 24)

@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumController" customModule="Bosta_Gallery" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="FYJ-Py-0Sc" id="vcJ-vl-7VB"/>
+                <outlet property="collectionView" destination="dAm-LE-j03" id="CKs-YG-WNF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,10 +18,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FYJ-Py-0Sc" customClass="IntrinsicCollectionView" customModule="Bosta_Gallery" customModuleProvider="target">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-LE-j03" customClass="IntrinsicCollectionView" customModule="Bosta_Gallery" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B9I-Dc-rxo">
+                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="YkZ-2Z-MlC">
                         <size key="itemSize" width="100" height="100"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -31,10 +31,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FYJ-Py-0Sc" secondAttribute="trailing" id="ApZ-H4-t1d"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FYJ-Py-0Sc" secondAttribute="bottom" id="D4k-YS-yNC"/>
-                <constraint firstItem="FYJ-Py-0Sc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Vvj-zc-f7V"/>
-                <constraint firstItem="FYJ-Py-0Sc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mUa-t9-Xvx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dAm-LE-j03" secondAttribute="trailing" id="4tJ-nB-xJA"/>
+                <constraint firstItem="dAm-LE-j03" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tm8-qO-L6O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dAm-LE-j03" secondAttribute="bottom" id="X6D-2l-hDb"/>
+                <constraint firstItem="dAm-LE-j03" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qEy-xw-tEH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="113"/>
