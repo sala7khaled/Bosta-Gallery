@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+class Geo: Codable {
+
+    let lat: String
+    let lng: String
+
+}
+
+extension Geo {
+
+    enum CodingKeys: String, CodingKey {
+
+        case lat
+        case lng
+    }
+}

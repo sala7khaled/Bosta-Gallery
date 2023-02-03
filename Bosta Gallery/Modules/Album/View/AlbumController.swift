@@ -2,29 +2,42 @@
 //  AlbumController.swift
 //  Bosta Gallery
 //
-//  Created by Salah Khaled on 03/02/2023.
+//  Created by Salah Khaled on 02/02/2023.
 //  Copyright © 2023 Salah Khaled. All rights reserved.
 //
 
 import UIKit
 
-class AlbumController: UIViewController {
-
+class AlbumController: BaseController {
+    
+    
+    @IBOutlet weak var collectionView: IntrinsicCollectionView!
+    
+    var presenter: AlbumPresenterInterface!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = presenter.album.title
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        presenter.viewDidLoad()
+        initCollectionView()
     }
+    
+}
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension AlbumController: AlbumView {
+    
+    func showViewLoading() {
+        showLoading()
     }
-    */
-
+    
+    func hideViewLoading() {
+        hideLoading()
+    }
+    
+    func reloadUI() {
+        collectionView.reloadData()
+    }
 }

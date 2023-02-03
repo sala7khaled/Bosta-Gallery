@@ -2,29 +2,47 @@
 //  LoadingController.swift
 //  Bosta Gallery
 //
-//  Created by Salah Khaled on 03/02/2023.
+//  Created by Salah Khaled on 02/02/2023.
 //  Copyright © 2023 Salah Khaled. All rights reserved.
 //
 
 import UIKit
 
 class LoadingController: UIViewController {
-
+    
+    @IBOutlet weak var indicatorLoading: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        indicatorLoading.startAnimating()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func show() {
+        DispatchQueue.main.async {
+            let keyWindow = UIApplication.shared.connectedScenes
+            .filter({ $0.activationState == .foregroundActive })
+            .map({$0 as? UIWindowScene})
+            .compactMap({ $0 })
+            .first?.windows
+            .filter({ $0.isKeyWindow }).first
+            keyWindow?.addSubview(self.view)
+            
+            self.view.frame = UIScreen.main.bounds
+            self.view.alpha = 0
+            
+            UIView.animate(withDuration: 0.2, animations: {
+                self.view.alpha = 1
+            })
+        }
     }
-    */
-
+    
+    func close() {
+        DispatchQueue.main.async {
+            self.view.alpha = 1
+            UIView.animate(withDuration: 0.2, animations: {
+                self.view.alpha = 0
+            }, completion: { _ in self.view.removeFromSuperview() })
+        }
+    }
 }
+

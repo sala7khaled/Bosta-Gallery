@@ -10,12 +10,13 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
 
-
+    @IBOutlet weak var photo: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure(with Title: String) {
-        
+    func configure(with image: Image) {
+        photo.loadImage(url: image.url)
     }
 }
