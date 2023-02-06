@@ -15,7 +15,7 @@ I've used [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) to retrive
 
 ## Preview
 
-### Lauch
+### Launch
 <img src="/Assets/1.png" alt="Demo" height="600px"/>
 
 ### Home
